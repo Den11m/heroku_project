@@ -1,5 +1,5 @@
 module.exports = {
-    PORT: 5555,
+    PORT: process.env.PORT || 5555,
     facebook: {
         clientID: 1993107304353343,
         clientSecret: '4ca499c5cac0921d44b08b288685c118',

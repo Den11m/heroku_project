@@ -12,6 +12,5 @@ module.exports = {
         // dbURL: 'mongodb://localhost:27017/local',
         dbURL: 'mongodb://Den11m:data_products_2018@ds219641.mlab.com:19641/data_products',
     },
-
 };
 

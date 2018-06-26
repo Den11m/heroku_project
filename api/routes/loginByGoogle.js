@@ -13,7 +13,7 @@ const userGoogle = () => {
     passport.use(new GoogleStrategy({
             clientID: keys.google.clientID,
             clientSecret: keys.google.clientSecret,
-            callbackURL: `https://enigmatic-caverns-60540.herokuapp.com/:${keys.PORT}/users/login/google/callback`
+            callbackURL: 'https://enigmatic-caverns-60540.herokuapp.com/users/login/google/callback'
         },
         function (accessToken, refreshToken, profile, done) {
 

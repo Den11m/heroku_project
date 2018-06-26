@@ -20,8 +20,5 @@
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.5"
   }
 }

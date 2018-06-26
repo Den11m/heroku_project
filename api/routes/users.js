@@ -96,8 +96,8 @@ router.post('/login', (req, res, next) => {
         .catch()
 });
 
-router.get('/login/facebook', passport.authenticate('facebook',{scope:['profile']}));
-router.get('/login/facebook/callback', passport.authenticate('facebook'), (req, res) => {
+router.get('/login/facebook', passport.authenticate('facebook'));
+router.get('/login/facebook/callback', (req, res) => {
     res.send('You are welcome at Facebook')
     }
 );

@@ -97,16 +97,10 @@ router.post('/login', (req, res, next) => {
 });
 
 router.get('/login/facebook', passport.authenticate('facebook'));
-router.get('/login/facebook/callback', (req, res) => {
-    res.send('You are welcome at Facebook')
-    }
-);
+router.get('/login/facebook/callback', (req, res) => {res.redirect('../../../products/')});
 
 router.get('/login/google', passport.authenticate('google',{scope:['profile']}));
-router.get('/login/google/callback', (req, res) => {
-        res.redirect('../../../products/')
-    }
-);
+router.get('/login/google/callback', (req, res) = > {res.redirect('../../../products/')});
 
 
 module.exports = router;

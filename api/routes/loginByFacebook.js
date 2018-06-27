@@ -7,7 +7,6 @@ const keys = require('../../config/keys');
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
 
-// const User = require('../models/user');
 const SocialUser = require('../models/socialUser');
 
 const userFacebook = () => {
@@ -29,19 +28,14 @@ passport.use(new FacebookStrategy({
                         displayName: data.displayName
                     }).save()
                         .then(newUser => {
-                            console.log('__info about newUser__', newUser)
+                            console.log('__info about Facebook newUser__', newUser)
                         });
                     done(null, newUser)
                 }
-            }).catch(err=>{
+            })
+            .catch(err=>{
             console.log(err)
         })
-
-
-        // User.findOrCreate({email: data.email}, function(err, user) {
-        //     if (err) { return done(err); }
-        //     done(null, user);
-        // });
     }
 ));
 };

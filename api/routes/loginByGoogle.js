@@ -28,11 +28,12 @@ const userGoogle = () => {
                             displayName: data.displayName
                         }).save()
                             .then(newUser => {
-                                console.log('__info about newUser__', newUser)
+                                console.log('__info about Google newUser__', newUser)
                             });
                         done(null, newUser)
                     }
-                }).catch(err=>{
+                })
+                .catch(err=>{
                     console.log(err)
             })
         }
